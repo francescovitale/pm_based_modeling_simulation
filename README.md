@@ -11,7 +11,7 @@ Please note that the list above is not comprehensive and there could be other re
 
 # Execution instructions and project description
 
-The methodology runs by executing the DOS experimentation_road_data.bat script. This script includes a set of parameters that can be customized to set: 
+The methodology runs by executing the DOS experimentation_road_data.bat script. This script includes experimental parameters to set: 
 
 - The process discovery variant (pd_variant)
 - The number of clusters (n_clusters)
