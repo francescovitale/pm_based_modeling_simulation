@@ -36,3 +36,5 @@ When the experiment repetition is completed, the evaluation.py script executes t
 - Save the anomalous Petri net for each number of clusters and process discovery technique pair;
 - Calculate the quality metrics related to the modeling and simulation quality, i.e., the fitness, precision and conformance checking time metrics;
 - Find the best simulated time series and compute the root mean squared error across all the simulated time series.
+
+All the results can be found under the Results folder.
