@@ -19,17 +19,25 @@ from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 
 input_dir = "Input/ELE/"
 input_data_dir = input_dir + "Data/"
+input_training_data_dir = input_data_dir + "Training/"
+input_test_data_dir = input_data_dir + "Test/"
 
 output_dir = "Output/ELE/"
 output_eventlog_dir = output_dir + "EventLog/"
 
 def read_data():
-	windows = []
 
-	for window_file in os.listdir(input_data_dir):
-		windows.append(pd.read_csv(input_data_dir + window_file))
+	time_series_windows = {}
+	
+	time_series_windows["Training"] = []
+	for window_file in os.listdir(input_training_data_dir):
+		time_series_windows["Training"].append(pd.read_csv(input_training_data_dir + window_file))
 		
-	return windows
+	time_series_windows["Test"] = []
+	for window_file in os.listdir(input_test_data_dir):
+		time_series_windows["Test"].append(pd.read_csv(input_test_data_dir + window_file))	
+		
+	return time_series_windows
 	
 def extract_state_transitions(data, sensor_types, synthetic_data):
 	state_transitions = []
@@ -117,9 +125,10 @@ def timestamp_builder(number):
 	
 	return "1900-01-01T"+str(hh)+":"+str(mm)+":"+str(ss)	
 	
-def save_log(event_log):
+def save_log(event_logs):
 
-	xes_exporter.apply(event_log, output_eventlog_dir + "EL.xes")
+	xes_exporter.apply(event_logs["Training"], output_eventlog_dir + "EL_TR.xes")
+	xes_exporter.apply(event_logs["Test"], output_eventlog_dir + "EL_TST.xes")
 
 	return None		
 	
@@ -134,11 +143,20 @@ except:
 	print("Enter the right number of input arguments.")
 	sys.exit()	
 	
-windows = read_data()
+time_series_windows = read_data()
 
+event_logs = {}
+
+event_logs["Training"] = None
 windows_state_transitions = []
-for window in windows:
+for window in time_series_windows["Training"]:
 	windows_state_transitions.append(extract_state_transitions(window, sensor_types, synthetic_data))
-event_log = build_event_log(windows_state_transitions)
+event_logs["Training"] = build_event_log(windows_state_transitions)
 
-save_log(event_log)
+event_logs["Test"] = None
+windows_state_transitions = []
+for window in time_series_windows["Test"]:
+	windows_state_transitions.append(extract_state_transitions(window, sensor_types, synthetic_data))
+event_logs["Test"] = build_event_log(windows_state_transitions)
+
+save_log(event_logs)
