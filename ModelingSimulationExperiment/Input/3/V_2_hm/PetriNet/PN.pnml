@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <transition id="J2-1_0">
+        <name>
+          <text>J2-1_0</text>
+        </name>
+      </transition>
+      <transition id="J2-0_1">
+        <name>
+          <text>J2-0_1</text>
+        </name>
+      </transition>
+      <arc id="1405508887440" source="source0" target="J2-1_0"/>
+      <arc id="1405513875984" source="J2-0_1" target="sink0"/>
+      <arc id="1405513842640" source="J2-1_0" target="sink0"/>
+      <arc id="1405513842128" source="source0" target="J2-0_1"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink0">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

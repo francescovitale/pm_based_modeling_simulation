@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="ilp" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>ilp</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="3">
+        <name>
+          <text>3</text>
+        </name>
+      </place>
+      <place id="4">
+        <name>
+          <text>4</text>
+        </name>
+      </place>
+      <place id="2">
+        <name>
+          <text>2</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="J2-0_1">
+        <name>
+          <text>J2-0_1</text>
+        </name>
+      </transition>
+      <transition id="■">
+        <name>
+          <text>■</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="bbf855ea-f461-41fe-9bf3-0d9ec6a396c1"/>
+      </transition>
+      <transition id="▶">
+        <name>
+          <text>▶</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1054b7ee-22d3-496b-b150-f08d62b40fa1"/>
+      </transition>
+      <transition id="J2-1_0">
+        <name>
+          <text>J2-1_0</text>
+        </name>
+      </transition>
+      <arc id="1856533395344" source="4" target="J2-1_0"/>
+      <arc id="1856533386576" source="■" target="sink"/>
+      <arc id="1856533386768" source="source" target="▶"/>
+      <arc id="1856533392400" source="2" target="J2-0_1"/>
+      <arc id="1856533392272" source="▶" target="2"/>
+      <arc id="1856533392144" source="J2-1_0" target="2"/>
+      <arc id="1856533393616" source="J2-1_0" target="3"/>
+      <arc id="1856533393744" source="▶" target="3"/>
+      <arc id="1856533393872" source="3" target="J2-1_0"/>
+      <arc id="1856533394000" source="3" target="■"/>
+      <arc id="1856533395216" source="J2-0_1" target="4"/>
+      <arc id="1856533395472" source="4" target="■"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="ilp" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>ilp</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="3">
+        <name>
+          <text>3</text>
+        </name>
+      </place>
+      <place id="2">
+        <name>
+          <text>2</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="J2-0_1">
+        <name>
+          <text>J2-0_1</text>
+        </name>
+      </transition>
+      <transition id="J2-1_0">
+        <name>
+          <text>J2-1_0</text>
+        </name>
+      </transition>
+      <transition id="■">
+        <name>
+          <text>■</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="fe92dae1-d44d-4850-8083-9397f265f9af"/>
+      </transition>
+      <transition id="▶">
+        <name>
+          <text>▶</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="031d4671-1282-44e4-8855-66ce52212fde"/>
+      </transition>
+      <arc id="2745592140688" source="■" target="sink"/>
+      <arc id="2745592145680" source="J2-1_0" target="2"/>
+      <arc id="2745592146064" source="▶" target="2"/>
+      <arc id="2745592140944" source="source" target="▶"/>
+      <arc id="2745592146448" source="2" target="J2-1_0"/>
+      <arc id="2745592146576" source="2" target="■"/>
+      <arc id="2745592147728" source="J2-0_1" target="3"/>
+      <arc id="2745592147920" source="▶" target="3"/>
+      <arc id="2745592148048" source="3" target="J2-0_1"/>
+      <arc id="2745592148176" source="3" target="■"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="ilp" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>ilp</text>
+    </name>
+    <page id="n0">
+      <place id="12">
+        <name>
+          <text>12</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="3">
+        <name>
+          <text>3</text>
+        </name>
+      </place>
+      <place id="4">
+        <name>
+          <text>4</text>
+        </name>
+      </place>
+      <place id="2">
+        <name>
+          <text>2</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="5">
+        <name>
+          <text>5</text>
+        </name>
+      </place>
+      <place id="6">
+        <name>
+          <text>6</text>
+        </name>
+      </place>
+      <place id="7">
+        <name>
+          <text>7</text>
+        </name>
+      </place>
+      <place id="8">
+        <name>
+          <text>8</text>
+        </name>
+      </place>
+      <place id="9">
+        <name>
+          <text>9</text>
+        </name>
+      </place>
+      <place id="10">
+        <name>
+          <text>10</text>
+        </name>
+      </place>
+      <place id="11">
+        <name>
+          <text>11</text>
+        </name>
+      </place>
+      <place id="13">
+        <name>
+          <text>13</text>
+        </name>
+      </place>
+      <transition id="▶">
+        <name>
+          <text>▶</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="97d8769f-fa5b-49ad-b326-81180f695b28"/>
+      </transition>
+      <transition id="J2-0_1">
+        <name>
+          <text>J2-0_1</text>
+        </name>
+      </transition>
+      <transition id="J2-1_2">
+        <name>
+          <text>J2-1_2</text>
+        </name>
+      </transition>
+      <transition id="J2-0_2">
+        <name>
+          <text>J2-0_2</text>
+        </name>
+      </transition>
+      <transition id="J2-1_0">
+        <name>
+          <text>J2-1_0</text>
+        </name>
+      </transition>
+      <transition id="J2-0_3">
+        <name>
+          <text>J2-0_3</text>
+        </name>
+      </transition>
+      <transition id="J2-2_0">
+        <name>
+          <text>J2-2_0</text>
+        </name>
+      </transition>
+      <transition id="J2-2_1">
+        <name>
+          <text>J2-2_1</text>
+        </name>
+      </transition>
+      <transition id="J2-3_0">
+        <name>
+          <text>J2-3_0</text>
+        </name>
+      </transition>
+      <transition id="J2-3_2">
+        <name>
+          <text>J2-3_2</text>
+        </name>
+      </transition>
+      <transition id="■">
+        <name>
+          <text>■</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e35cabdd-9b24-406f-afb1-831114569741"/>
+      </transition>
+      <arc id="1998257716944" source="J2-3_2" target="13"/>
+      <arc id="1998257640976" source="▶" target="3"/>
+      <arc id="1998257640464" source="J2-0_2" target="3"/>
+      <arc id="1998257641488" source="3" target="J2-3_0"/>
+      <arc id="1998257648656" source="J2-1_0" target="6"/>
+      <arc id="1998257705040" source="▶" target="9"/>
+      <arc id="1998257709072" source="11" target="J2-0_1"/>
+      <arc id="1998257709584" source="11" target="■"/>
+      <arc id="1998257712144" source="▶" target="12"/>
+      <arc id="1998257712656" source="12" target="J2-2_0"/>
+      <arc id="1998257716752" source="J2-0_1" target="13"/>
+      <arc id="1998257705552" source="9" target="■"/>
+      <arc id="1998257712784" source="12" target="J2-3_2"/>
+      <arc id="1998257647184" source="5" target="J2-0_1"/>
+      <arc id="1998257651280" source="J2-3_2" target="7"/>
+      <arc id="1998257643600" source="J2-0_1" target="4"/>
+      <arc id="1998257644112" source="J2-3_2" target="4"/>
+      <arc id="1998257644624" source="4" target="J2-1_0"/>
+      <arc id="1998257649232" source="6" target="J2-1_0"/>
+      <arc id="1998257702480" source="8" target="J2-0_1"/>
+      <arc id="1998257637456" source="J2-3_0" target="2"/>
+      <arc id="1998257290320" source="source" target="▶"/>
+      <arc id="1998257637584" source="J2-3_2" target="2"/>
+      <arc id="1998257707088" source="J2-3_2" target="10"/>
+      <arc id="1998257707600" source="10" target="J2-2_1"/>
+      <arc id="1998257638096" source="2" target="J2-3_0"/>
+      <arc id="1998257646544" source="J2-1_0" target="5"/>
+      <arc id="1998257651024" source="J2-0_2" target="7"/>
+      <arc id="1998257647056" source="▶" target="5"/>
+      <arc id="1998257708624" source="J2-1_0" target="11"/>
+      <arc id="1998257717072" source="13" target="J2-0_1"/>
+      <arc id="1998257641104" source="3" target="J2-0_1"/>
+      <arc id="1998257640592" source="J2-1_0" target="3"/>
+      <arc id="1998257641616" source="3" target="J2-3_2"/>
+      <arc id="1998257701008" source="7" target="J2-1_0"/>
+      <arc id="1998257702032" source="J2-1_0" target="8"/>
+      <arc id="1998257705104" source="9" target="J2-0_1"/>
+      <arc id="1998257706640" source="J2-0_1" target="10"/>
+      <arc id="1998257709200" source="11" target="J2-0_3"/>
+      <arc id="1998257711760" source="J2-2_0" target="12"/>
+      <arc id="1998257712272" source="12" target="J2-0_1"/>
+      <arc id="1998257712400" source="12" target="J2-0_3"/>
+      <arc id="1998257712912" source="12" target="■"/>
+      <arc id="1998257637200" source="J2-0_1" target="2"/>
+      <arc id="1998257647312" source="5" target="J2-1_0"/>
+      <arc id="1998257651408" source="▶" target="7"/>
+      <arc id="1998257643728" source="J2-0_2" target="4"/>
+      <arc id="1998257647824" source="5" target="■"/>
+      <arc id="1998257644240" source="▶" target="4"/>
+      <arc id="1998257644752" source="4" target="J2-2_1"/>
+      <arc id="1998257648848" source="J2-3_2" target="6"/>
+      <arc id="1998257702096" source="J2-3_2" target="8"/>
+      <arc id="1998257649360" source="6" target="J2-2_0"/>
+      <arc id="1998257702608" source="8" target="J2-1_0"/>
+      <arc id="1998257707216" source="▶" target="10"/>
+      <arc id="1998257637712" source="▶" target="2"/>
+      <arc id="1998257750160" source="13" target="J2-3_2"/>
+      <arc id="1998257711696" source="J2-0_1" target="12"/>
+      <arc id="1998257707728" source="10" target="J2-3_2"/>
+      <arc id="1998257646672" source="J2-1_2" target="5"/>
+      <arc id="1998257716688" source="J2-1_0" target="13"/>
+      <arc id="1998257704784" source="J2-3_2" target="9"/>
+      <arc id="1998257717200" source="13" target="J2-1_0"/>
+      <arc id="1998257640720" source="J2-3_0" target="3"/>
+      <arc id="1998257641232" source="3" target="J2-0_2"/>
+      <arc id="1998257641744" source="3" target="■"/>
+      <arc id="1998257701136" source="7" target="J2-3_2"/>
+      <arc id="1998257647696" source="5" target="J2-3_2"/>
+      <arc id="1998257648400" source="J2-0_1" target="6"/>
+      <arc id="1998257704720" source="J2-1_0" target="9"/>
+      <arc id="1998257708304" source="J2-0_1" target="11"/>
+      <arc id="1998257708816" source="J2-3_2" target="11"/>
+      <arc id="1998257709328" source="11" target="J2-1_0"/>
+      <arc id="1998257705296" source="9" target="J2-1_0"/>
+      <arc id="1998257710800" source="J2-0_3" target="12"/>
+      <arc id="1998257706832" source="J2-1_0" target="10"/>
+      <arc id="1998257637328" source="J2-1_0" target="2"/>
+      <arc id="1998257647440" source="5" target="J2-1_2"/>
+      <arc id="1998257651536" source="7" target="J2-0_1"/>
+      <arc id="1998257643856" source="J2-1_0" target="4"/>
+      <arc id="1998257644368" source="4" target="J2-0_1"/>
+      <arc id="1998257701712" source="J2-1_2" target="8"/>
+      <arc id="1998257644880" source="4" target="J2-3_2"/>
+      <arc id="1998257648976" source="▶" target="6"/>
+      <arc id="1998257649488" source="6" target="J2-3_2"/>
+      <arc id="1998257702736" source="8" target="J2-1_2"/>
+      <arc id="1998257638224" source="2" target="J2-3_2"/>
+      <arc id="1998257707344" source="10" target="J2-0_1"/>
+      <arc id="1998257637840" source="2" target="J2-0_1"/>
+      <arc id="1998257650256" source="J2-0_1" target="7"/>
+      <arc id="1998257711824" source="J2-1_0" target="12"/>
+      <arc id="1998257707856" source="10" target="■"/>
+      <arc id="1998257638352" source="2" target="■"/>
+      <arc id="1998257646800" source="J2-2_0" target="5"/>
+      <arc id="1998257704400" source="J2-0_1" target="9"/>
+      <arc id="1998257708880" source="▶" target="11"/>
+      <arc id="1998251921360" source="■" target="sink"/>
+      <arc id="1998257640336" source="J2-0_1" target="3"/>
+      <arc id="1998257640848" source="J2-3_2" target="3"/>
+      <arc id="1998257641360" source="3" target="J2-1_0"/>
+      <arc id="1998257701264" source="7" target="■"/>
+      <arc id="1998257648528" source="J2-2_0" target="6"/>
+      <arc id="1998257702288" source="J2-0_1" target="8"/>
+      <arc id="1998257709456" source="11" target="J2-3_2"/>
+      <arc id="1998257712016" source="J2-3_2" target="12"/>
+      <arc id="1998257712528" source="12" target="J2-1_0"/>
+      <arc id="1998257705424" source="9" target="J2-3_2"/>
+      <arc id="1998257706960" source="J2-2_1" target="10"/>
+      <arc id="1998257647568" source="5" target="J2-2_0"/>
+      <arc id="1998257643984" source="J2-2_1" target="4"/>
+      <arc id="1998257644496" source="4" target="J2-0_2"/>
+      <arc id="1998257702864" source="8" target="J2-3_2"/>
+      <arc id="1998257645008" source="4" target="■"/>
+      <arc id="1998257649104" source="6" target="J2-0_1"/>
+      <arc id="1998257702352" source="▶" target="8"/>
+      <arc id="1998257651152" source="J2-1_0" target="7"/>
+      <arc id="1998257651664" source="7" target="J2-0_2"/>
+      <arc id="1998257649616" source="6" target="■"/>
+      <arc id="1998257702992" source="8" target="■"/>
+      <arc id="1998257707472" source="10" target="J2-1_0"/>
+      <arc id="1998257637968" source="2" target="J2-1_0"/>
+      <arc id="1998257646416" source="J2-0_1" target="5"/>
+      <arc id="1998257646928" source="J2-3_2" target="5"/>
+      <arc id="1998257708496" source="J2-0_3" target="11"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
